@@ -1,0 +1,34 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="SPEND" value="" [(ngModel)]="model.spend" name="spend" type="number">
+    <button mat-button *ngIf="spend" matSuffix mat-icon-button aria-label="Clear" (click)="spend=''"
+    style="border:none;background:none;outline:none">
+      <i class="material-icons">
+        clear
+      </i>
+    </button>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="DESCRIPTION" value="" [(ngModel)]="model.description" name="description">
+    <button mat-button *ngIf="description" matSuffix mat-icon-button aria-label="Clear" (click)="description=''"
+    style="border:none;background:none;outline:none">
+      <i class="material-icons">
+        clear
+      </i>
+    </button>
+  </mat-form-field>
+</form>
+<form class="example-form">
+  <mat-form-field class="example-form-field">
+    <input matInput type="text" placeholder="PASSWORD" name="alone" [(ngModel)]="model.password">
+    <button mat-button *ngIf="password" matSuffix mat-icon-button aria-label="Clear" (click)="password=''"
+    style="border:none;background:none;outline:none">
+      <i class="material-icons">
+        clear
+      </i>
+    </button>
+  </mat-form-field>
+</form>
+<div class="button-row">
+  <button mat-raised-button color="pink" onclick="sendSpendInformation()">SUBMIT</button>
+</div>
